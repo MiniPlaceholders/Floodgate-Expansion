@@ -41,6 +41,7 @@ sponge {
         dependency("floodgate") {
             loadOrder(PluginDependency.LoadOrder.AFTER)
             optional(false)
+            version("2.2.0-SNAPSHOT")
         }
     }
 }
