@@ -7,7 +7,7 @@ plugins {
 
 dependencies {
     compileOnly(libs.miniplaceholders)
-    implementation(projects.exampleExpansionCommon)
+    implementation(projects.floodgateExpansionCommon)
 }
 
 sponge {
@@ -17,14 +17,14 @@ sponge {
         name(PluginLoaders.JAVA_PLAIN)
         version("1.0")
     }
-    plugin("example-expansion") {
-        displayName("Example-Expansion")
-        entrypoint("io.github.miniplaceholders.expansion.example.sponge.SpongePlugin")
+    plugin("miniplaceholders-floodgate-expansion") {
+        displayName("Miniplaceholders-Floodgate-Expansion")
+        entrypoint("io.github.miniplaceholders.expansion.floodgate.sponge.SpongePlugin")
         description(project.description)
         links {
-            homepage("https://github.com/MiniPlaceholders/Example-Expansion")
-            source("https://github.com/MiniPlaceholders/Example-Expansion")
-            issues("https://github.com/MiniPlaceholders/Example-Expansion/issues")
+            homepage("https://github.com/MiniPlaceholders/Floodgate-Expansion")
+            source("https://github.com/MiniPlaceholders/Floodgate-Expansion")
+            issues("https://github.com/MiniPlaceholders/Floodgate-Expansion/issues")
         }
         contributor("4drian3d") {
             description("Lead Developer")
@@ -36,7 +36,11 @@ sponge {
         dependency("miniplaceholders") {
             loadOrder(PluginDependency.LoadOrder.AFTER)
             optional(false)
-            version("2.2.0")
+            version("2.2.1")
+        }
+        dependency("floodgate") {
+            loadOrder(PluginDependency.LoadOrder.AFTER)
+            optional(false)
         }
     }
 }

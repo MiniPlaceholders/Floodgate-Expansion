@@ -1,14 +1,14 @@
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
-rootProject.name = "Example-Expansion"
+rootProject.name = "Floodgate-Expansion"
 
 plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.7.0"
 }
 
 arrayOf("common", "paper", "velocity", "sponge").forEach {
-    include("example-expansion-$it")
+    include("floodgate-expansion-$it")
 
-    project(":example-expansion-$it").projectDir = file(it)
+    project(":floodgate-expansion-$it").projectDir = file(it)
 }
 
